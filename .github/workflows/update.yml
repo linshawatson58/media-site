@@ -1,0 +1,79 @@
+name: Update and deploy
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # every 6 hours
+  workflow_dispatch:          # "Run workflow" button
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    defaults:
+      run:
+        working-directory: media-site
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Each script skips itself if its secrets aren't set, and one failing
+      # source never blocks the others.
+      - name: Letterboxd
+        run: node scripts/fetch-letterboxd.mjs
+        continue-on-error: true
+        env:
+          LETTERBOXD_USER: meen_achar
+
+      - name: Hevy
+        run: node scripts/fetch-hevy.mjs
+        continue-on-error: true
+        env:
+          HEVY_API_KEY: ${{ secrets.HEVY_API_KEY }}
+
+      - name: Spotify
+        run: node scripts/fetch-spotify.mjs
+        continue-on-error: true
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+
+      # Commit the data so the archives (Letterboxd, Spotify) keep growing.
+      - name: Save data
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "site-bot"
+          git config user.email "site-bot@users.noreply.github.com"
+          git add site/data
+          git diff --cached --quiet || git commit -m "Update data"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: media-site/site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
