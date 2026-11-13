@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>meen_achar · what I'm into</title>
+<style>
+  :root {
+    --bg: #14110f; --panel: #1d1916; --line: #2e2823; --text: #f1e9df; --muted: #9a8f83;
+    --accent: #f2a65a; --accent2: #7fc8a9;
+    --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #faf6f0; --panel: #fff; --line: #e8dfd3; --text: #2a2420; --muted: #7b6f63; --accent: #c4661f; --accent2: #2f8f6b; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.5; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--accent); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px 80px; }
+  header { padding: 56px 0 24px; }
+  h1 { font-family: var(--serif); font-size: clamp(2rem, 6vw, 3.4rem); margin: 0; font-weight: 400; letter-spacing: -0.02em; }
+  h1 em { color: var(--accent); font-style: italic; }
+  .sub { color: var(--muted); margin-top: 8px; }
+  nav { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); margin: 0 -20px 8px; padding: 10px 20px; display: flex; gap: 6px; overflow-x: auto; }
+  nav a { padding: 6px 14px; border-radius: 999px; font-size: .9rem; color: var(--muted); white-space: nowrap; border: 1px solid transparent; }
+  nav a:hover { border-color: var(--line); color: var(--text); }
+  section { padding-top: 44px; }
+  h2 { font-family: var(--serif); font-weight: 400; font-size: 1.8rem; margin: 0 0 4px; }
+  .meta { color: var(--muted); font-size: .82rem; margin-bottom: 18px; }
+  .stats { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+  .stat { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 18px; min-width: 110px; }
+  .stat b { display: block; font-family: var(--serif); font-size: 1.7rem; font-weight: 400; color: var(--accent); }
+  .stat span { color: var(--muted); font-size: .8rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; }
+  .poster { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+  .poster .img { aspect-ratio: 2/3; background: linear-gradient(135deg, var(--line), var(--panel)); display: flex; align-items: center; justify-content: center; padding: 10px; text-align: center; font-family: var(--serif); color: var(--muted); }
+  .poster img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .poster .cap { padding: 8px 10px 10px; font-size: .82rem; }
+  .poster .cap b { display: block; font-weight: 600; }
+  .stars { color: var(--accent); letter-spacing: .05em; font-size: .85rem; }
+  .list { display: grid; gap: 8px; }
+  .row { display: flex; align-items: center; gap: 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
+  .row .t { flex: 1; min-width: 0; }
+  .row .t b { display: block; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .row .t span, .row .r { color: var(--muted); font-size: .82rem; }
+  .row .r { text-align: right; white-space: nowrap; }
+  .row img.cover { width: 44px; height: 44px; border-radius: 6px; object-fit: cover; background: var(--line); flex: none; }
+  .pill { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); margin-right: 6px; }
+  .pill.on { color: var(--accent2); border-color: var(--accent2); }
+  .tabs { display: flex; gap: 6px; margin-bottom: 12px; }
+  .tabs button { font: inherit; font-size: .82rem; background: none; color: var(--muted); border: 1px solid var(--line); padding: 4px 12px; border-radius: 999px; cursor: pointer; }
+  .tabs button[aria-pressed="true"] { background: var(--accent); color: #1a120a; border-color: var(--accent); }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  @media (max-width: 760px) { .cols { grid-template-columns: 1fr; } }
+  h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 600; margin: 0 0 10px; }
+  .banner { background: color-mix(in srgb, var(--accent) 14%, transparent); border: 1px dashed var(--accent); color: var(--text); font-size: .8rem; padding: 3px 10px; border-radius: 8px; display: inline-block; margin-bottom: 12px; }
+  .empty { color: var(--muted); padding: 18px 0; }
+  footer { margin-top: 70px; color: var(--muted); font-size: .8rem; border-top: 1px solid var(--line); padding-top: 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>what <em>meen_achar</em> is into</h1>
+    <div class="sub">Films, TV, books, workouts and music, pulled from the apps I actually use.</div>
+  </header>
+  <nav>
+    <a href="#films">Films</a><a href="#tv">TV</a><a href="#books">Books</a><a href="#workouts">Workouts</a><a href="#music">Music</a>
+  </nav>
+
+  <section id="films"></section>
+  <section id="tv"></section>
+  <section id="books"></section>
+  <section id="workouts"></section>
+  <section id="music"></section>
+
+  <footer>Films from Letterboxd · TV from Bingers · Books from Fable · Workouts from Hevy · Music from Spotify</footer>
+</div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s = '') => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const fmtDate = (d) => d ? new Date(d).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+const ago = (iso) => iso ? 'updated ' + fmtDate(iso) : '';
+const stars = (r) => {
+  if (!r) return '';
+  const full = Math.floor(r), half = r % 1 >= 0.5;
+  return '★'.repeat(full) + (half ? '½' : '');
+};
+const load = (n) => fetch(`data/${n}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+const head = (title, d, extra = '') =>
+  `<h2>${title}</h2><div class="meta">${ago(d?.updatedAt)}</div>${d?.sample ? '<div class="banner">Sample data — real entries appear after the first update</div>' : ''}${extra}`;
+const stat = (n, label) => `<div class="stat"><b>${n}</b><span>${label}</span></div>`;
+const empty = (msg) => `<div class="empty">${msg}</div>`;
+
+function films(d) {
+  if (!d) return $('#films').innerHTML = '<h2>Films</h2>' + empty('No data yet.');
+  const items = d.items;
+  const year = new Date().getFullYear();
+  const thisYear = items.filter((f) => (f.watched || '').startsWith(year)).length;
+  const rated = items.filter((f) => f.rating);
+  const avg = rated.length ? (rated.reduce((a, f) => a + f.rating, 0) / rated.length).toFixed(1) : '–';
+  const cards = items.slice(0, 24).map((f) => `
+    <a class="poster" href="${esc(f.url)}" target="_blank" rel="noopener">
+      <div class="img">${f.poster ? `<img src="${esc(f.poster)}" alt="" loading="lazy">` : esc(f.title)}</div>
+      <div class="cap"><b>${esc(f.title)}</b>${f.year || ''} ${f.rewatch ? '↻' : ''}<div class="stars">${stars(f.rating)}</div></div>
+    </a>`).join('');
+  $('#films').innerHTML = head('Films', d, `<div class="stats">${stat(items.length, 'logged')}${stat(thisYear, 'in ' + year)}${stat(avg, 'avg rating')}</div>`) +
+    `<div class="grid">${cards}</div>`;
+}
+
+function tv(d) {
+  if (!d) return $('#tv').innerHTML = '<h2>TV</h2>' + empty('No data yet.');
+  const label = { watching: 'Watching', finished: 'Finished', want: 'Watchlist' };
+  const rows = d.items.map((s) => `
+    <div class="row"><div class="t"><b>${esc(s.title)}</b>
+      <span><span class="pill ${s.status === 'watching' ? 'on' : ''}">${label[s.status] || esc(s.status)}</span>${s.season ? 'S' + s.season : ''}${s.episode ? ' · E' + s.episode : ''}</span></div>
+      <div class="r"><div class="stars">${stars(s.rating)}</div>${fmtDate(s.date)}</div></div>`).join('');
+  const done = d.items.filter((s) => s.status === 'finished').length;
+  const now = d.items.filter((s) => s.status === 'watching').length;
+  $('#tv').innerHTML = head('TV', d, `<div class="stats">${stat(now, 'watching')}${stat(done, 'finished')}</div>`) + `<div class="list">${rows}</div>`;
+}
+
+function books(d) {
+  if (!d) return $('#books').innerHTML = '<h2>Books</h2>' + empty('No data yet.');
+  const label = { reading: 'Reading', finished: 'Finished', want: 'Want to read' };
+  const order = { reading: 0, finished: 1, want: 2 };
+  const items = [...d.items].sort((a, b) => (order[a.status] ?? 3) - (order[b.status] ?? 3));
+  const year = String(new Date().getFullYear());
+  const thisYear = d.items.filter((b) => b.status === 'finished' && (b.finished || '').startsWith(year)).length;
+  const rows = items.slice(0, 40).map((b) => `
+    <div class="row"><div class="t"><b>${esc(b.title)}</b><span>${esc(b.author)}</span></div>
+      <div class="r"><span class="pill ${b.status === 'reading' ? 'on' : ''}">${label[b.status] || esc(b.status)}</span><div class="stars">${stars(b.rating)}</div>${fmtDate(b.finished)}</div></div>`).join('');
+  $('#books').innerHTML = head('Books', d, `<div class="stats">${stat(d.items.filter((b) => b.status === 'finished').length, 'finished')}${stat(thisYear, 'in ' + year)}</div>`) + `<div class="list">${rows}</div>`;
+}
+
+function workouts(d) {
+  if (!d) return $('#workouts').innerHTML = '<h2>Workouts</h2>' + empty('No data yet.');
+  const wk = Date.now() - 7 * 864e5;
+  const week = d.items.filter((w) => new Date(w.date) > wk).length;
+  const rows = d.items.slice(0, 10).map((w) => `
+    <div class="row"><div class="t"><b>${esc(w.title)}</b><span>${esc(w.exercises.slice(0, 4).join(' · '))}</span></div>
+      <div class="r">${w.minutes ? w.minutes + ' min · ' : ''}${(w.volumeKg / 1000).toFixed(1)} t<br>${fmtDate(w.date)}</div></div>`).join('');
+  $('#workouts').innerHTML = head('Workouts', d, `<div class="stats">${stat(d.total, 'total workouts')}${stat(week, 'last 7 days')}</div>`) + `<div class="list">${rows}</div>`;
+}
+
+function music(d) {
+  if (!d) return $('#music').innerHTML = '<h2>Music</h2>' + empty('No data yet.');
+  const names = { short: '4 weeks', medium: '6 months', long: 'All time' };
+  let range = 'short';
+  const draw = () => {
+    const tracks = (d.topTracks[range] || []).map((t, i) => `
+      <div class="row">${t.image ? `<img class="cover" src="${esc(t.image)}" alt="">` : ''}<div class="t"><b>${i + 1}. ${esc(t.name)}</b><span>${esc(t.artists)}</span></div></div>`).join('');
+    const artists = (d.topArtists[range] || []).map((a, i) => `
+      <div class="row">${a.image ? `<img class="cover" src="${esc(a.image)}" alt="" style="border-radius:50%">` : ''}<div class="t"><b>${i + 1}. ${esc(a.name)}</b></div></div>`).join('');
+    $('#music-top').innerHTML = `<div class="cols"><div><h3>Top tracks</h3><div class="list">${tracks || empty('Nothing yet.')}</div></div><div><h3>Top artists</h3><div class="list">${artists || empty('Nothing yet.')}</div></div></div>`;
+    document.querySelectorAll('#music .tabs button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.r === range));
+  };
+  const recent = d.recent.slice(0, 8).map((t) => `
+    <div class="row">${t.image ? `<img class="cover" src="${esc(t.image)}" alt="">` : ''}<div class="t"><b>${esc(t.name)}</b><span>${esc(t.artists)}</span></div><div class="r">${fmtDate(t.playedAt)}</div></div>`).join('');
+  $('#music').innerHTML = head('Music', d) +
+    `<h3>Recently played</h3><div class="list" style="margin-bottom:28px">${recent}</div>
+     <div class="tabs">${Object.entries(names).map(([k, v]) => `<button data-r="${k}">${v}</button>`).join('')}</div><div id="music-top"></div>`;
+  document.querySelectorAll('#music .tabs button').forEach((b) => b.addEventListener('click', () => { range = b.dataset.r; draw(); }));
+  draw();
+}
+
+Promise.all(['films', 'tv', 'books', 'workouts', 'spotify'].map(load)).then(([f, t, b, w, s]) => {
+  films(f); tv(t); books(b); workouts(w); music(s);
+});
+</script>
+</body>
+</html>

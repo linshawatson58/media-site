@@ -1,0 +1,10 @@
+{
+  "updatedAt": "2026-11-13T12:00:00.000Z",
+  "sample": true,
+  "total": 128,
+  "items": [
+    {"id":"w1","title":"Push Day","date":"2026-11-12T06:30:00.000Z","minutes":62,"exercises":["Bench Press","Overhead Press","Triceps Pushdown"],"sets":14,"volumeKg":6120},
+    {"id":"w2","title":"Pull Day","date":"2026-11-10T06:30:00.000Z","minutes":58,"exercises":["Deadlift","Pull Up","Barbell Row"],"sets":13,"volumeKg":7340},
+    {"id":"w3","title":"Leg Day","date":"2026-11-08T07:00:00.000Z","minutes":70,"exercises":["Squat","Leg Press","Leg Curl"],"sets":15,"volumeKg":9200}
+  ]
+}

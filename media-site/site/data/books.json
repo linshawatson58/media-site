@@ -1,0 +1,11 @@
+{
+  "updatedAt": "2026-11-13T12:00:00.000Z",
+  "sample": true,
+  "source": "fable",
+  "items": [
+    {"title":"Sample Book One","author":"Author A","rating":4,"finished":"2026-11-02","status":"finished","review":""},
+    {"title":"Sample Book Two","author":"Author B","rating":null,"finished":null,"status":"reading","review":""},
+    {"title":"Sample Book Three","author":"Author C","rating":5,"finished":"2026-09-18","status":"finished","review":""},
+    {"title":"Sample Book Four","author":"Author D","rating":null,"finished":null,"status":"want","review":""}
+  ]
+}

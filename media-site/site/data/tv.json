@@ -1,0 +1,11 @@
+{
+  "updatedAt": "2026-11-13T12:00:00.000Z",
+  "sample": true,
+  "source": "bingers",
+  "items": [
+    {"title":"Sample Show One","status":"watching","season":2,"episode":4,"rating":null,"date":"2026-11-11"},
+    {"title":"Sample Show Two","status":"finished","season":3,"episode":null,"rating":4.5,"date":"2026-10-30"},
+    {"title":"Sample Show Three","status":"finished","season":1,"episode":null,"rating":4,"date":"2026-10-05"},
+    {"title":"Sample Show Four","status":"want","season":null,"episode":null,"rating":null,"date":null}
+  ]
+}

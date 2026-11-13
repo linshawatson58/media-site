@@ -1,0 +1,20 @@
+{
+  "updatedAt": "2026-11-13T12:00:00.000Z",
+  "sample": true,
+  "recent": [
+    {"playedAt":"2026-11-13T10:02:00Z","name":"Sample Track A","artists":"Artist One","album":"Album","image":"","url":""},
+    {"playedAt":"2026-11-13T09:58:00Z","name":"Sample Track B","artists":"Artist Two","album":"Album","image":"","url":""},
+    {"playedAt":"2026-11-13T09:54:00Z","name":"Sample Track C","artists":"Artist One","album":"Album","image":"","url":""}
+  ],
+  "history": [],
+  "topTracks": {
+    "short": [{"name":"Sample Track A","artists":"Artist One","album":"","image":"","url":""},{"name":"Sample Track B","artists":"Artist Two","album":"","image":"","url":""}],
+    "medium": [{"name":"Sample Track C","artists":"Artist One","album":"","image":"","url":""}],
+    "long": [{"name":"Sample Track D","artists":"Artist Three","album":"","image":"","url":""}]
+  },
+  "topArtists": {
+    "short": [{"name":"Artist One","image":"","url":""},{"name":"Artist Two","image":"","url":""}],
+    "medium": [{"name":"Artist One","image":"","url":""}],
+    "long": [{"name":"Artist Three","image":"","url":""}]
+  }
+}

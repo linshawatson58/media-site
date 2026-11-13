@@ -1,0 +1,11 @@
+{
+  "updatedAt": "2026-11-13T12:00:00.000Z",
+  "sample": true,
+  "user": "meen_achar",
+  "items": [
+    {"id":"s1","title":"Sample Film One","year":2024,"rating":4.5,"watched":"2026-11-10","rewatch":false,"poster":"","review":"Placeholder entry. Real films replace this on the first update.","url":"https://letterboxd.com/meen_achar/"},
+    {"id":"s2","title":"Sample Film Two","year":2019,"rating":3.5,"watched":"2026-11-06","rewatch":true,"poster":"","review":"","url":"https://letterboxd.com/meen_achar/"},
+    {"id":"s3","title":"Sample Film Three","year":2023,"rating":5,"watched":"2026-10-29","rewatch":false,"poster":"","review":"","url":"https://letterboxd.com/meen_achar/"},
+    {"id":"s4","title":"Sample Film Four","year":2001,"rating":3,"watched":"2026-10-21","rewatch":false,"poster":"","review":"","url":"https://letterboxd.com/meen_achar/"}
+  ]
+}
