@@ -1,7 +1,23 @@
 {
-  "updatedAt": "2026-11-13T12:42:54.780Z",
-  "total": 109,
+  "updatedAt": "2026-11-13T18:43:17.351Z",
+  "total": 110,
   "items": [
+    {
+      "id": "a1db3560-6bec-4fd7-a362-c0b5a165411d",
+      "title": "Push ⚡️",
+      "date": "2026-11-13T14:17:28.000Z",
+      "minutes": 54,
+      "exercises": [
+        "Standing Chest Press (Machine Plates)",
+        "Incline Chest Press (Machine Plates)",
+        "Shoulder Press (Dumbbell)",
+        "Lateral Raise (Dumbbell)",
+        "Triceps Extension (Dumbbell)",
+        "Triceps Rope Pushdown"
+      ],
+      "sets": 18,
+      "volumeKg": 2400
+    },
     {
       "id": "3e9b67fe-75be-482d-bd21-d1458d508626",
       "title": "Glutes, Hams & Core 🍑",
@@ -306,22 +322,6 @@
       ],
       "sets": 1,
       "volumeKg": 0
-    },
-    {
-      "id": "3e548c13-ee0a-4540-929e-398b827dd4e4",
-      "title": "Upper Body 💪🏾",
-      "date": "2026-09-08T13:47:23.000Z",
-      "minutes": 103,
-      "exercises": [
-        "Bench Press (Dumbbell)",
-        "Incline Chest Press (Machine Plates)",
-        "Shoulder Press (Machine Plates)",
-        "Triceps Rope Pushdown",
-        "Lat Pulldown (Cable)",
-        "Rotation Curl (Dumbbell)"
-      ],
-      "sets": 24,
-      "volumeKg": 3780
     }
   ]
 }
