@@ -1,7 +1,23 @@
 {
-  "updatedAt": "2026-11-25T13:08:51.467Z",
-  "total": 110,
+  "updatedAt": "2026-11-25T18:45:43.161Z",
+  "total": 111,
   "items": [
+    {
+      "id": "9d9abf4d-0c63-4c65-b728-59ea4e5c45cb",
+      "title": "Push ⚡️",
+      "date": "2026-11-25T14:38:58.000Z",
+      "minutes": 57,
+      "exercises": [
+        "Incline Chest Press (Machine Plates)",
+        "Chest Fly (Machine)",
+        "Shoulder Press (Dumbbell)",
+        "Lateral Raise (Dumbbell)",
+        "Triceps Extension (Dumbbell)",
+        "Triceps Rope Pushdown"
+      ],
+      "sets": 18,
+      "volumeKg": 2090
+    },
     {
       "id": "a1db3560-6bec-4fd7-a362-c0b5a165411d",
       "title": "Push ⚡️",
@@ -311,17 +327,6 @@
       ],
       "sets": 27,
       "volumeKg": 2753
-    },
-    {
-      "id": "476a27d1-9148-4684-890f-805cce403161",
-      "title": "Morning Run ☀️",
-      "date": "2026-09-09T04:51:49.000Z",
-      "minutes": 24,
-      "exercises": [
-        "Running"
-      ],
-      "sets": 1,
-      "volumeKg": 0
     }
   ]
 }
