@@ -1,7 +1,23 @@
 {
-  "updatedAt": "2026-11-26T13:06:54.803Z",
-  "total": 111,
+  "updatedAt": "2026-11-26T18:51:13.424Z",
+  "total": 112,
   "items": [
+    {
+      "id": "59194b36-5483-4832-9759-c93f7b386220",
+      "title": "Pull 💪🏾",
+      "date": "2026-11-26T14:47:07.000Z",
+      "minutes": 60,
+      "exercises": [
+        "Lat Pulldown (Cable)",
+        "Iso-Lateral Row (Machine Plates)",
+        "Rear Delt Reverse Fly (Machine)",
+        "Rope Straight Arm Pulldown",
+        "Rotation Curl (Dumbbell)",
+        "Hammer Curl (Dumbbell)"
+      ],
+      "sets": 18,
+      "volumeKg": 2465
+    },
     {
       "id": "9d9abf4d-0c63-4c65-b728-59ea4e5c45cb",
       "title": "Push ⚡️",
@@ -308,25 +324,6 @@
       ],
       "sets": 24,
       "volumeKg": 3470
-    },
-    {
-      "id": "1df8b260-021a-494c-ab45-3d89ab6fb314",
-      "title": "Full Body ⭐️",
-      "date": "2026-09-23T13:49:29.000Z",
-      "minutes": 96,
-      "exercises": [
-        "Incline Push Ups",
-        "Incline Chest Press (Machine Plates)",
-        "Shoulder Press (Machine Plates)",
-        "Rear Delt Reverse Fly (Machine)",
-        "Leg Extension (Machine Plates)",
-        "Lying Leg Curl (Machine)",
-        "Rotation Curl (Dumbbell)",
-        "Triceps Rope Pushdown",
-        "Leg Raise Parallel Bars"
-      ],
-      "sets": 27,
-      "volumeKg": 2753
     }
   ]
 }
